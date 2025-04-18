@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button } from '@/components/ui/button';
+import { Button } from '../components/ui/Button';
 import { Menu } from 'lucide-react';
 
 const navItems = ['Inicio', 'Quesos', 'Jugos', 'Licuados', 'Contacto'];

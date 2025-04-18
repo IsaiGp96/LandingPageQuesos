@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card, CardContent } from '../components/ui/Card';
-import { Button } from '@/components/ui/button';
+import { Button } from '../components/ui/Button';
 
 const products = [
   { id: 1, name: 'Queso Fresco', price: '150 MXN/kg', image: 'src/assets/images/laurel.png' },
