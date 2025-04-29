@@ -19,7 +19,7 @@ export default function Header() {
           </a>
         ))}
       </nav>
-      <Button title="Próximamente">Haz tu pedido</Button>
+      <Button title="Próximamente" className='hidden'>Haz tu pedido</Button>
       <Menu className="md:hidden h-6 w-6 text-secundario" />
     </header>
   );
