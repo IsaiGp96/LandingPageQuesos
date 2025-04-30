@@ -3,27 +3,32 @@ import { Card, CardContent } from '../components/ui/Card';
 import { Button } from '../components/ui/Button';
 
 const products = [
-  { id: 1, name: 'Queso Fresco', price: '150 MXN/kg', image: 'src/assets/images/laurel.png' },
-  { id: 2, name: 'Queso Añejo', price: '180 MXN', image: '/images/queso-anejo.jpg' },
-  { id: 3, name: 'Smoothie Verde', price: '90 MXN', image: '/images/smoothie-verde.jpg' },
+  { id: 1, name: 'Queso Laurel', price: '150 MXN/kg', image: '/src/assets/images/laurel.png' },
+  { id: 2, name: 'Licuado Jumbo', price: '90 MXN', image: '/src/assets/images/licuado.png' },
+  { id: 3, name: 'Jugo Grande', price: '60 MXN', image: '/src/assets/images/jugo.png' },
 ];
 
 export default function Products() {
   return (
-    <section id="productos" className="py-16 px-6 container mx-auto">
-      <h3 className="terciario text-3xl font-bold mb-8 text-shadow-amber-500">Nuestros Productos</h3>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+    <section id="productos" className="py-16 px-4 sm:px-6 md:px-8 container mx-auto">
+      <h3 className="terciario text-2xl sm:text-3xl font-bold mb-8 text-zinc-950 text-center sm:text-left">
+        Nuestros Productos
+      </h3>
+
+      <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
         {products.map(product => (
-          <Card key={product.id} className="bg-neutro-claro shadow-lg">
+          <Card key={product.id} className="bg-neutro-claro flex flex-col transition hover:shadow-xl">
             <img
               src={product.image}
               alt={product.name}
-              className="h-50 w-50 place-self-center object-fill rounded-t-lg"
+              className="w-full h-48 sm:h-56 object-contain rounded-t-xl p-4"
             />
-            <CardContent>
-              <h4 className="text-neutro font-semibold mb-2">{product.name}</h4>
-              <p className="secundario mb-4">{product.price}</p>
-              <Button className="w-full">Agregar al carrito</Button>
+            <CardContent className="flex flex-col flex-grow justify-between gap-4 p-4">
+              <div>
+                <h4 className="text-zinc-900 font-semibold text-lg sm:text-xl mb-1">{product.name}</h4>
+                <p className="text-zinc-900 font-bold text-base sm:text-lg">{product.price}</p>
+              </div>
+              <Button className="w-full mt-auto">Ver más</Button>
             </CardContent>
           </Card>
         ))}

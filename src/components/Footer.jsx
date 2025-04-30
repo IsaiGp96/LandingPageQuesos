@@ -2,32 +2,13 @@ import React from 'react';
 
 export default function Footer() {
   return (
-    <footer className="bg-neutro text-white py-10 px-6">
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div>
+    <footer className="bg-black opacity-50 text-neutro py-10 px-6 rounded-t-2xl">
+      <div className="container mx-auto gap-8">
+        <div className='justify-self-center'>
           <h5 className="text-primario font-semibold mb-4">Quesos de los Campos</h5>
-          <p className="text-secundario">Av. Principal S/N, Chihuahua, México</p>
-          <p className="text-secundario">Contacto: +52 614 123 4567</p>
-        </div>
-        <div>
-          <h5 className="text-primario font-semibold mb-4">Enlaces</h5>
-          <ul className="space-y-2">
-            {['Políticas', 'Términos', 'Mapa del sitio'].map(item => (
-              <li key={item}>
-                <a href="#" className="text-secundario hover:text-acento">
-                  {item}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
-        <div>
-          <h5 className="text-primario font-semibold mb-4">Síguenos</h5>
-          <div className="flex space-x-4">
-            <a href="#" className="text-acento2 hover:text-acento">Facebook</a>
-            <a href="#" className="text-acento2 hover:text-acento">Instagram</a>
-            <a href="#" className="text-acento2 hover:text-acento">TikTok</a>
-          </div>
+          <p className="text-secundario">Av Fedor Dostoyevzki 303-E Col, Quintas Quijote II Etapa, Chihuahua 2000, 31136 Chihuahua, Chih.</p>
+          <p className="text-secundario">Contacto: +52 614-123-4567</p>
+          <iframe className='rounded-2xl' width={800} height={200} loading="lazy" src="https://maps.google.com/maps?q=Av+Fedor+Dostoyevzki+303-E+Col,+Quintas+Quijote+II+Etapa,+Chihuahua+2000,+31136+Chihuahua,+Chih.&amp;t=m&amp;z=15&amp;output=embed&amp;iwloc=near" title="Av Fedor Dostoyevzki 303-E Col, Quintas Quijote II Etapa, Chihuahua 2000, 31136 Chihuahua, Chih." aria-label="Av Fedor Dostoyevzki 303-E Col, Quintas Quijote II Etapa, Chihuahua 2000, 31136 Chihuahua, Chih." data-gtm-yt-inspected-9="true"></iframe>
         </div>
       </div>
     </footer>
