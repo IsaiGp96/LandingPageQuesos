@@ -1,6 +1,5 @@
 import React from "react";
-import { Card, CardContent } from '../components/ui/Card';
-import { Button } from '../components/ui/Button';
+import { Card, CardContent } from '../ui/Card';
 
 const products = [
     { id: 1, name: 'Laurel', price: '150 MXN/kg', image: '/src/assets/images/laurel.png' },
@@ -26,7 +25,6 @@ export default function Chese ()  {
                             <CardContent>
                                 <h4 className="text-zinc-900 font-semibold mb-2">{product.name}</h4>
                                 <p className="secundario mb-4">{product.price}</p>
-                                <Button className="w-full">Ver más</Button>
                             </CardContent>
                         </Card>
                     ))}
