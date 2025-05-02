@@ -18,7 +18,6 @@ export default function Header() {
     <header className="mb-5 w-full flex flex-col md:flex-row items-center justify-between p-6 bg-white shadow-md rounded-2xl relative">
       {/* Título */}
       <div className="flex justify-between items-center w-full md:w-auto">
-        <h1 className="secundario text-xl font-bold pr-48">Quesos de los Campos</h1>
         {/* Botón de menú para móviles */}
         <button
           className="md:hidden"

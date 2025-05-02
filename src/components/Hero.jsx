@@ -9,7 +9,7 @@ export default function Hero() {
       >
         <div className="absolute inset-0 bg-amber-50 rounded-2xl shadow-2xl" />
         <div className="relative flex flex-col items-start justify-center h-full text-white">
-          <h2 className="secundario break-normal md:break-all md:text-6xl mb-4">
+          <h2 className="secundario break-normal sm:text-xl md:text-6xl mb-4">
             Descubre el auténtico sabor de Chihuahua
           </h2>
           <p className="secundario text-lg md:text-2xl mb-6">
