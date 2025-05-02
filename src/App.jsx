@@ -6,7 +6,7 @@ import './App.css'
 
 import Home from './pages/Home';
 import Chese from './components/pages/Chese';
-// import Jugos from './components/pages/Jugos';
+import Jugos from './components/pages/Juice';
 // import Licuados from './components/pages/Licuados';
 // import Contacto from './components/pages/Contacto';
 
@@ -19,8 +19,8 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/quesos" element={<Chese />} />
-            {/* <Route path="/jugos" element={<Jugos />} />
-            <Route path="/licuados" element={<Licuados />} />
+            <Route path="/jugos" element={<Jugos />} />
+            {/* <Route path="/licuados" element={<Licuados />} />
             <Route path="/contacto" element={<Contacto />} /> */}
           </Routes>
         </main>
