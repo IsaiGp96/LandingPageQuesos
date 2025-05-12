@@ -5,14 +5,14 @@ export default function Hero() {
     <>
       <section
         id="inicio"
-        className="relative h-60 bg-center"
+        className="mt-20 relative w-full overflow-hidden min-h-[25vh] md:min-h-[80vh] flex items-center justify-center bg-center px-4"
       >
-        <div className="absolute inset-0 bg-amber-50 rounded-2xl shadow-2xl" />
-        <div className="relative flex flex-col items-start justify-center h-full text-white">
-          <h2 className="secundario break-normal sm:text-xl md:text-6xl mb-4">
+        <div className="absolute inset-0 w-full bg-amber-50 rounded-2xl" />
+        <div className="relative z-10 max-w-4xl text-center">
+          <h2 className="text-gray-800 font-bold text-2xl sm:text-3xl md:text-5xl lg:text-6xl mb-4 leading-tight">
             Descubre el auténtico sabor de Chihuahua
           </h2>
-          <p className="secundario text-lg md:text-2xl mb-6">
+          <p className="text-gray-700 text-base sm:text-lg md:text-xl lg:text-2xl">
             Quesos artesanales y jugos naturales que nutren cuerpo y alma.
           </p>
         </div>
