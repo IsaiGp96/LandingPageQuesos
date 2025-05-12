@@ -10,12 +10,12 @@ const products = [
 
 export default function Products() {
   return (
-    <section id="productos" className="py-16 px-4 sm:px-6 md:px-8 container mx-auto">
+    <section id="productos" className="py-16 px-4 sm:px-6 md:px-8 max-w-screen-xl mx-auto overflow-hidden">
       <h3 className="terciario text-2xl sm:text-3xl font-bold mb-8 text-zinc-950 text-center sm:text-left">
         Nuestros Productos
       </h3>
 
-      <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
         {products.map(product => (
           <Card key={product.id} className="bg-neutro-claro flex flex-col transition hover:shadow-xl">
             <img

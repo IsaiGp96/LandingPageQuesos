@@ -8,8 +8,15 @@ export default function Footer() {
           <h5 className="text-primario font-semibold mb-4">Quesos de los Campos</h5>
           <p className="text-secundario">Av Fedor Dostoyevzki 303-E Col, Quintas Quijote II Etapa, Chihuahua 2000, 31136 Chihuahua, Chih.</p>
           <p className="text-secundario">Contacto: +52 614-123-4567</p>
-          <iframe className='rounded-2xl' width={800} height={200} loading="lazy" src="https://maps.google.com/maps?q=Av+Fedor+Dostoyevzki+303-E+Col,+Quintas+Quijote+II+Etapa,+Chihuahua+2000,+31136+Chihuahua,+Chih.&amp;t=m&amp;z=15&amp;output=embed&amp;iwloc=near" title="Av Fedor Dostoyevzki 303-E Col, Quintas Quijote II Etapa, Chihuahua 2000, 31136 Chihuahua, Chih." aria-label="Av Fedor Dostoyevzki 303-E Col, Quintas Quijote II Etapa, Chihuahua 2000, 31136 Chihuahua, Chih." data-gtm-yt-inspected-9="true"></iframe>
-        </div>
+          <div className="w-full">
+            <iframe
+              className="w-full h-48 sm:h-64 rounded-2xl"
+              loading="lazy"
+              src="https://maps.google.com/maps?q=Av+Fedor+Dostoyevzki+303-E+Col,+Quintas+Quijote+II+Etapa,+Chihuahua+2000,+31136+Chihuahua,+Chih.&amp;t=m&amp;z=15&amp;output=embed&amp;iwloc=near"
+              title="Ubicación"
+              aria-label="Ubicación Quesos de los Campos"
+            ></iframe>
+          </div>        </div>
       </div>
     </footer>
   );
