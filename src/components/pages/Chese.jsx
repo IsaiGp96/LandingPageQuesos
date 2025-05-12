@@ -3,8 +3,8 @@ import { Card, CardContent } from '../ui/Card';
 
 const products = [
     { id: 1, name: 'Queso Asadero Tortilla',    price: '$150.00', image: '' },
-    { id: 2, name: 'Queso Laurel Barra',        price: '$158.00', image: './src/assets/images/laurel.png' },
-    { id: 3, name: 'Queso Laurel De Rueda',     price: '$158.00', image: './src/assets/images/laurel.png' },
+    { id: 2, name: 'Queso Laurel Barra',        price: '$158.00', image: '/images/laurel.png' },
+    { id: 3, name: 'Queso Laurel De Rueda',     price: '$158.00', image: '/images/laurel.png' },
     { id: 3, name: 'Queso Los Pinos',           price: '$172.00', image: '' },
     { id: 4, name: 'Queso Panela',              price: '$136.00', image: '' },
     { id: 5, name: 'Queso Para Elote',          price: '$50.00',  image: '' },

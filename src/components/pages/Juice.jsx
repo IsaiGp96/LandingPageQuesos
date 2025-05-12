@@ -2,10 +2,10 @@ import React from "react";
 import { Card, CardContent } from '../ui/Card';
 
 const products = [
-    { id: 1, name: 'Los tres mosqueteros', price: '150 MXN/kg', image: './src/assets/images/jugo.png' },
-    { id: 2, name: 'Vampiro', image: './src/assets/images/jugo.png' },
-    { id: 3, name: 'Naranja', image: './src/assets/images/jugo.png' },
-    { id: 4, name: 'Verde', image: './src/assets/images/jugo.png' },
+    { id: 1, name: 'Los tres mosqueteros', price: '150 MXN/kg', image: '/images/jugo.png' },
+    { id: 2, name: 'Vampiro', image: '/images/jugo.png' },
+    { id: 3, name: 'Naranja', image: '/images/jugo.png' },
+    { id: 4, name: 'Verde', image: '/images/jugo.png' },
 
 ];
 

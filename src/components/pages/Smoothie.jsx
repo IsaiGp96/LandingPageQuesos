@@ -2,8 +2,8 @@ import React from "react";
 import { Card, CardContent } from '../ui/Card';
 
 const products = [
-    { id: 1, name: 'Platano', price: '150 MXN/kg', image: './src/assets/images/licuado.png' },
-    { id: 2, name: 'Mango', image: './src/assets/images/licuado.png' },
+    { id: 1, name: 'Platano', price: '150 MXN/kg', image: '/images/licuado.png' },
+    { id: 2, name: 'Mango', image: '/images/licuado.png' },
 
 
 ];
