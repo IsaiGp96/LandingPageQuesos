@@ -28,7 +28,6 @@ export default function Products() {
                 <h4 className="text-zinc-900 font-semibold text-lg sm:text-xl mb-1">{product.name}</h4>
                 <p className="text-zinc-900 font-bold text-base sm:text-lg">{product.price}</p>
               </div>
-              <Button className="w-full mt-auto">Ver más</Button>
             </CardContent>
           </Card>
         ))}
