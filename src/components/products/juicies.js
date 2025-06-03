@@ -1,6 +1,9 @@
 export const juicies = [
-    { id: 1, name: 'Tres caballeros', description: 'Naranja, zanahoria, apio', image: '/images/jugo.png' },
-    { id: 2, name: 'El Vampiro', description: 'Naranja, zanahoria, betabel', image: '/images/jugo.png' },
-    { id: 3, name: 'Naranja', description: '', image: '/images/jugo.png' },
-    { id: 4, name: 'Verde', description: 'Naranja, nopal, piña, perejil, apio', image: '/images/jugo.png' },
+    { id: 1, name: 'Naranja', description: 'Naranja', image: '/images/naranja.png' },
+    { id: 2, name: 'Zanahoria', description: 'Zanahoria', image: '/images/zanahoria.png' },
+    { id: 2, name: 'Betabel', description: 'Betabel', image: '/images/betabel.png' },
+    { id: 2, name: 'Apio', description: 'Apio', image: '/images/apio.png' },
+    { id: 4, name: 'Nopal', description: 'Nopal', image: '/images/nopal.png' },
+    { id: 4, name: 'Piña', description: 'Piña', image: '/images/piña.png' },
+    { id: 4, name: 'Perejil', description: 'Perejil', image: '/images/perejil.png' },
 ];
