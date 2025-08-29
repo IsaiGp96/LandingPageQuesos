@@ -11,7 +11,7 @@ export default function Juice() {
 
   return (
     <>
-      <section id="jugos" className="py-16 px-6 container mx-auto">
+      <section id="jugos" className="px-6 container mx-auto">
         <ScrollReveal once trigger="middle" offset={40}>
           {(active) => (
             <h3 className={`terciario text-3xl font-bold mb-8 text-zinc-950 transition-all duration-700 ${active ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
@@ -36,7 +36,7 @@ export default function Juice() {
         </div>
       </section>
 
-      <section id="jugos-lista" className="py-16 px-6 container mx-auto justify-items-center">
+      <section id="jugos-lista" className=" px-6 container mx-auto justify-items-center">
         <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {juicies.map((product, i) => (
             <ScrollReveal key={product.id} once offset={80}>
