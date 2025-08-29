@@ -14,8 +14,7 @@ export default function Chese() {
             </h3>
           )}
         </ScrollReveal>
-
-        <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 gap-8">
+       <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 gap-8">
           {cheess.map((product, i) => (
             <ScrollReveal key={product.id} once offset={80}>
               {(active) => (

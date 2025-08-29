@@ -67,6 +67,7 @@ export default function Footer() {
           {(active) => (
             <div
               className={`rounded-2xl bg-white/5  shadow-sm ring-1 ring-white/10 transition-all duration-700 ${active ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+
                 }`}
             >
               <h6 className="text-primario font-semibold mb-3">Pago por transferencia</h6>
