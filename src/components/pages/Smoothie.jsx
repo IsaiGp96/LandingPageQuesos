@@ -68,7 +68,7 @@ export default function Smoothie() {
           )}
         </ScrollReveal>
 
-        <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {cereal.map((product, i) => (
             <ScrollReveal key={product.id} once offset={80}>
               {(active) => (
@@ -79,12 +79,12 @@ export default function Smoothie() {
                   <img
                     src={product.image}
                     alt={product.name}
-                    className="h-44 w-56 place-self-center object-cover rounded-t-lg"
+                    className="h-44 w-56 object-cover rounded-t-lg"
                     loading="lazy"
                   />
                   <CardContent>
                     <h4 className="text-zinc-900 font-semibold mb-2">{product.name}</h4>
-                    <p className="secundario mb-4">{product.price}</p>
+
                   </CardContent>
                 </Card>
               )}
@@ -102,7 +102,7 @@ export default function Smoothie() {
           )}
         </ScrollReveal>
 
-        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-2 sm:grid-cols-1 lg:grid-cols-2 gap-8">
           {lacteos.map((product, i) => (
             <ScrollReveal key={product.id} once offset={80}>
               {(active) => (
