@@ -5,7 +5,6 @@ import {
 } from '../hooks/ScrollReveal';
 export default function Footer() {
   const bank = {
-
     banco: 'Scotiabank',
     beneficiario: 'Quesos de los Campos',       
     cuenta: '00000000000',                      
@@ -26,13 +25,13 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-black/60 text-neutro py-10 px-6 rounded-t-2xl">
+    <footer className="bg-black/60 py-10 px-6 rounded-t-2xl">
       <div className="container mx-auto grid gap-10 md:grid-cols-2 lg:grid-cols-3">
         {/* Columna: Información del negocio */}
         <ScrollReveal once offset={40}>
           {(active) => (
             <div
-              className={`transition-all duration-700 ${active ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
+              className={`text-white transition-all duration-700 ${active ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
             >
               <h5 className="text-primario font-semibold mb-4">Quesos de los Campos</h5>
               <p className="text-secundario">
@@ -47,7 +46,7 @@ export default function Footer() {
         <ScrollReveal once offset={40}>
           {(active) => (
             <div
-              className={`transition-all duration-700 ${active ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
+              className={`text-white transition-all duration-700 ${active ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
             >
               <div className="w-full">
                 <iframe
@@ -70,21 +69,21 @@ export default function Footer() {
 
                 }`}
             >
-              <h6 className="text-primario font-semibold mb-3">Pago por transferencia</h6>
-              <p className="text-secundario mb-4">
+              <h6 className="text-white text-primario font-semibold mb-3">Pago por transferencia</h6>
+              <p className="text-white text-secundario mb-4">
                 Banco: <span className="font-medium text-neutro">{bank.banco}</span>
               </p>
 
               <dl className="space-y-3 text-sm">
-                <div className="flex items-center justify-between gap-3">
+                <div className="text-white flex items-center justify-between gap-3">
                   <dt className="text-secundario">Beneficiario</dt>
                   <dd className="text-neutro font-medium">{bank.beneficiario}</dd>
                 </div>
 
                 <div className="flex items-center justify-between gap-3">
-                  <dt className="text-secundario">Cuenta</dt>
+                  <dt className="text-white text-secundario">Cuenta</dt>
                   <dd className="flex items-center gap-2">
-                    <span className="text-neutro font-mono">{bank.cuenta}</span>
+                    <span className="text-white  font-mono">{bank.cuenta}</span>
                     <button
                       onClick={() => copy('cuenta', bank.cuenta)}
                       className="text-xs rounded-md px-2 py-1 bg-white/10 hover:bg-white/20 transition"
@@ -96,9 +95,9 @@ export default function Footer() {
                 </div>
 
                 <div className="flex items-center justify-between gap-3">
-                  <dt className="text-secundario">CLABE</dt>
+                  <dt className="text-white text-secundario">CLABE</dt>
                   <dd className="flex items-center gap-2">
-                    <span className="text-neutro font-mono">{bank.clabe}</span>
+                    <span className="text-white  font-mono">{bank.clabe}</span>
                     <button
                       onClick={() => copy('clabe', bank.clabe)}
                       className="text-xs rounded-md px-2 py-1 bg-white/10 hover:bg-white/20 transition"
@@ -109,21 +108,21 @@ export default function Footer() {
                   </dd>
                 </div>
 
-                <div className="flex items-center justify-between gap-3">
+                <div className="text-white flex items-center justify-between gap-3">
                   <dt className="text-secundario">Referencia</dt>
                   <dd className="text-neutro">{bank.referencia}</dd>
                 </div>
               </dl>
 
               <div
-                className="mt-3 h-5 text-xs text-primario"
+                className="text-white mt-3 h-5 text-xs text-primario"
                 aria-live="polite"
               >
                 {copied === 'cuenta' && 'Cuenta copiada ✅'}
                 {copied === 'clabe' && 'CLABE copiada ✅'}
               </div>
 
-              <p className="mt-4 text-xs text-secundario">
+              <p className="text-white mt-4 text-xs text-secundario">
                 * Envía tu comprobante por WhatsApp para confirmar tu pedido.
               </p>
             </div>
@@ -132,7 +131,7 @@ export default function Footer() {
       </div>
 
 
-      <div className="container mx-auto mt-8 text-[11px] text-secundario/80 text-center">
+      <div className="text-white container mx-auto mt-8 text-[11px] text-secundario/80 text-center">
         © {new Date().getFullYear()} Quesos de los Campos. Todos los derechos reservados.
       </div>
     </footer>
