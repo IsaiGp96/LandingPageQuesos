@@ -1,22 +1,19 @@
-import React from 'react';
+// src\components\Hero.tsx
+import styles from "../css/hero.module.scss";
 
 export default function Hero() {
   return (
-    <>
-      <section
-        id="inicio"
-        className="mt-20 relative w-full overflow-hidden min-h-[25vh] md:min-h-[80vh] flex items-center justify-center bg-center px-4 shadow-2xl rounded-2xl"
-      >
-        <div className="absolute inset-0 w-full bg-amber-50 rounded-2xl"/>
-        <div className="relative z-10 max-w-4xl text-center">
-          <h2 className="text-gray-800 font-bold text-2xl sm:text-3xl md:text-5xl lg:text-6xl mb-4 leading-tight">
-            Descubre el auténtico sabor de Chihuahua
-          </h2>
-          <p className="text-gray-700 text-base sm:text-lg md:text-xl lg:text-2xl">
-            Quesos artesanales y jugos naturales que nutren cuerpo y alma.
-          </p>
-        </div>
-      </section>
-    </>
+    <section id="inicio" className={styles.heroSection}>
+      <div className={styles.overlay} />
+      <div className={styles.content}>
+        <h2 className={styles.title}>
+          Descubre el auténtico sabor de Chihuahua
+        </h2>
+        <p className={styles.subtitle}>
+          Somos una empresa comprometida con brindar productos lacteos de excelente calidad: Quesos menonitas, crema mantequilla y entre otros productos regionales de Chihuahua.
+          De igual forma ofrecemos opciones de bebidas variadas para acompañar su día a día, jugos naturales, licuados, refrescos y aguas de sabor.
+        </p>
+      </div>
+    </section>
   );
 }
