@@ -2,6 +2,8 @@ import { Card, CardContent } from '../ui/Card';
 import { smoothies } from "../products/smoothies";
 import { cereal, lacteos } from '../products/cereal';
 import { ScrollReveal } from '../../hooks/ScrollReveal';
+import styles from "../../css/smoothie.module.scss";
+
 export default function Smoothie() {
   const precios = [
     { label: 'Jumbo', value: 100 },
@@ -10,21 +12,21 @@ export default function Smoothie() {
 
   return (
     <>
-      <section id="smoothies" className="py-16 px-6 container mx-auto">
+      <section id="smoothies" className={styles.section}>
         <ScrollReveal once trigger="middle" offset={40}>
           {(active) => (
-            <h3 className={`terciario text-3xl font-bold mb-8 text-zinc-950 transition-all duration-700 ${active ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+            <h3 className={`${styles.title} ${active ? styles.titleVisible : styles.titleHidden}`}>
               Arma tu licuado nutritivo
             </h3>
           )}
         </ScrollReveal>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2">
+        <div className={styles.priceGrid}>
           {precios.map((p, i) => (
             <ScrollReveal key={p.label} once offset={40}>
               {(active) => (
                 <h3
-                  className={`terciario text-3xl font-bold mb-8 text-zinc-950 transition-all duration-700 ${active ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
+                  className={`${styles.priceItem} ${active ? styles.priceVisible : styles.priceHidden}`}
                   style={{ transitionDelay: `${i * 90}ms` }}
                 >
                   {p.label}: ${p.value.toFixed(2)}
@@ -34,23 +36,23 @@ export default function Smoothie() {
           ))}
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className={styles.gridProducts}>
           {smoothies.map((product, i) => (
             <ScrollReveal key={product.id} once offset={80}>
               {(active) => (
                 <Card
-                  className={`bg-neutro-claro shadow-lg transition-all duration-700 ${active ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}
+                  className={`${styles.card} ${active ? styles.cardVisible : styles.cardHidden}`}
                   style={{ transitionDelay: `${i * 60}ms` }}
                 >
                   <img
                     src={product.image}
                     alt={product.name}
-                    className="h-44 w-56 place-self-center object-cover rounded-t-lg"
+                    className={styles.cardImage}
                     loading="lazy"
                   />
                   <CardContent>
-                    <h4 className="text-zinc-900 font-semibold mb-2">{product.name}</h4>
-                    <p className="secundario mb-4">{product.price}</p>
+                    <h4 className={styles.cardTitle}>{product.name}</h4>
+                    <p className={styles.cardPrice}>{product.price}</p>
                   </CardContent>
                 </Card>
               )}
@@ -59,32 +61,31 @@ export default function Smoothie() {
         </div>
       </section>
 
-      <section id="cereales" className="py-16 px-6 container mx-auto justify-items-center">
+      <section id="cereales" className={styles.section}>
         <ScrollReveal once trigger="middle" offset={40}>
           {(active) => (
-            <h3 className={`terciario text-3xl font-bold mb-8 text-zinc-950 transition-all duration-700 ${active ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+            <h3 className={`${styles.title} ${active ? styles.titleVisible : styles.titleHidden}`}>
               Cereales para acompañar
             </h3>
           )}
         </ScrollReveal>
 
-        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className={styles.gridProducts}>
           {cereal.map((product, i) => (
             <ScrollReveal key={product.id} once offset={80}>
               {(active) => (
                 <Card
-                  className={`bg-neutro-claro shadow-lg transition-all duration-700 ${active ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}
+                  className={`${styles.card} ${active ? styles.cardVisible : styles.cardHidden}`}
                   style={{ transitionDelay: `${i * 60}ms` }}
                 >
                   <img
                     src={product.image}
                     alt={product.name}
-                    className="h-44 w-56 object-cover rounded-t-lg"
+                    className={styles.cardImage}
                     loading="lazy"
                   />
                   <CardContent>
-                    <h4 className="text-zinc-900 font-semibold mb-2">{product.name}</h4>
-
+                    <h4 className={styles.cardTitle}>{product.name}</h4>
                   </CardContent>
                 </Card>
               )}
@@ -93,32 +94,32 @@ export default function Smoothie() {
         </div>
       </section>
 
-      <section id="lacteos" className="py-16 px-6 container mx-auto justify-items-center">
+      <section id="lacteos" className={styles.section}>
         <ScrollReveal once trigger="middle" offset={40}>
           {(active) => (
-            <h3 className={`terciario text-3xl font-bold mb-8 text-zinc-950 transition-all duration-700 ${active ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+            <h3 className={`${styles.title} ${active ? styles.titleVisible : styles.titleHidden}`}>
               El lácteo de tu preferencia
             </h3>
           )}
         </ScrollReveal>
 
-        <div className="grid grid-cols-2 sm:grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className={styles.gridProductsAlt}>
           {lacteos.map((product, i) => (
             <ScrollReveal key={product.id} once offset={80}>
               {(active) => (
                 <Card
-                  className={`bg-neutro-claro shadow-lg transition-all duration-700 ${active ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}
+                  className={`${styles.card} ${active ? styles.cardVisible : styles.cardHidden}`}
                   style={{ transitionDelay: `${i * 60}ms` }}
                 >
                   <img
                     src={product.image}
                     alt={product.name}
-                    className="h-44 w-56 place-self-center object-cover rounded-t-lg"
+                    className={styles.cardImage}
                     loading="lazy"
                   />
                   <CardContent>
-                    <h4 className="text-zinc-900 font-semibold mb-2">{product.name}</h4>
-                    <p className="secundario mb-4">{product.price}</p>
+                    <h4 className={styles.cardTitle}>{product.name}</h4>
+                    <p className={styles.cardPrice}>{product.price}</p>
                   </CardContent>
                 </Card>
               )}
