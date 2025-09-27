@@ -3,7 +3,7 @@ import Products from './components/Products';
 import Chese from './components/pages/Chese';
 import Juice from './components/pages/Juice';
 import Smoothie from './components/pages/Smoothie';
-import Footer from './components/Footer';
+import Footer from './components/pages/Footer';
 import Header from './components/Header';
 import './App.css';
 
