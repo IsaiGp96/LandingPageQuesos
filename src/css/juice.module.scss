@@ -1,0 +1,119 @@
+$sm: 640px;
+$lg: 1024px;
+
+.section {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.title {
+  font-size: 1.875rem;
+  font-weight: 700;   
+  margin-bottom: 2rem;
+  color: #09090b;    
+  transition: all 0.7s;
+
+  &.hidden {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+
+  &.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.priceGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @media (min-width: $sm) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: $lg) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.priceItem {
+  font-size: 1.875rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #09090b;
+  transition: all 0.7s;
+
+  &.hidden {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+
+  &.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Lista de jugos */
+.sectionList {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  justify-items: center;
+}
+
+.juiceGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem; /* gap-8 */
+
+  @media (min-width: $sm) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: $lg) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.card {
+  background-color: #ffb9696c;
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),
+              0 4px 6px -4px rgba(0,0,0,0.1);
+  transition: all 0.7s;
+
+  &.hidden {
+    opacity: 0;
+    transform: translateY(1.5rem);
+  }
+
+  &.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.cardImage {
+  height: 11rem;
+  width: 14rem;
+  place-self: center;
+  object-fit: cover;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+.cardTitle {
+  color: #18181b;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.cardPrice {
+  margin-bottom: 1rem;
+}

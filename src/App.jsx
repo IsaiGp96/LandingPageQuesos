@@ -1,33 +1,25 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import './App.css'
-
-
-import Home from './pages/Home';
+import Hero from './components/Hero';
+import Products from './components/Products';
 import Chese from './components/pages/Chese';
-import Jugos from './components/pages/Juice';
-import Licuados from './components/pages/Smoothie';
-// import Contacto from './components/pages/Contacto';
+import Juice from './components/pages/Juice';
+import Smoothie from './components/pages/Smoothie';
+import Footer from './components/pages/Footer';
+import Header from './components/Header';
+import './App.css';
 
-function App() {
+export default function App() {
   return (
-    <Router>
-      <div className="flex flex-col min-h-screen">
-        <Header />
-        <main className="flex-grow">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/quesos" element={<Chese />} />
-            <Route path="/jugos" element={<Jugos />} />
-            <Route path="/licuados" element={<Licuados />} />
-            {/* <Route path="/contacto" element={<Contacto />} /> */}
-          </Routes>
-        </main>
-        <Footer />
-      </div>
-    </Router>
+    <div className="flex flex-col min-h-screen">
+      <Header />
+
+      <main className="flex-grow">
+        <Hero />
+        <Products />
+        <Chese />
+        <Juice />
+        <Smoothie />
+      </main>
+      <Footer />
+    </div>
   );
 }
-
-export default App;

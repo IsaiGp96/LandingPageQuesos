@@ -1,6 +1,6 @@
-import React from 'react';
 import { Card, CardContent } from '../components/ui/Card';
-import { Button } from '../components/ui/Button';
+import { ScrollReveal } from '../hooks/ScrollReveal';
+import styles from "../css/products.module.scss";
 
 const products = [
   { id: 1, name: 'Queso Laurel', price: '150 MXN/kg', image: '/images/laurel.png' },
@@ -10,26 +10,37 @@ const products = [
 
 export default function Products() {
   return (
-    <section id="productos" className="py-16 px-4 sm:px-6 md:px-8 max-w-screen-xl mx-auto overflow-hidden">
-      <h3 className="terciario text-2xl sm:text-3xl font-bold mb-8 text-zinc-950 text-center sm:text-left">
-        Nuestros Productos
-      </h3>
-
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-        {products.map(product => (
-          <Card key={product.id} className="bg-neutro-claro flex flex-col transition hover:shadow-xl">
-            <img
-              src={product.image}
-              alt={product.name}
-              className="w-full h-48 sm:h-56 object-contain rounded-t-xl p-4"
-            />
-            <CardContent className="flex flex-col flex-grow justify-between gap-4 p-4">
-              <div>
-                <h4 className="text-zinc-900 font-semibold text-lg sm:text-xl mb-1">{product.name}</h4>
-                <p className="text-zinc-900 font-bold text-base sm:text-lg">{product.price}</p>
-              </div>
-            </CardContent>
-          </Card>
+    <section id="smoothies" className={styles.section}>
+      <ScrollReveal once trigger="middle" offset={40}>
+        {(active) => (
+          <h3 className={`${styles.title} ${active ? styles.titleVisible : styles.titleHidden}`}>
+            Arma tu licuado nutritivo
+          </h3>
+        )}
+      </ScrollReveal>
+      <div className={styles.grid}>
+        {products.map((product, i) => (
+          <ScrollReveal key={product.id} once offset={80}>
+            {(active) => (
+              <Card
+                className={`${styles.card} ${active ? styles.cardVisible : styles.cardHidden}`}
+                style={{ transitionDelay: `${i * 30}ms` }}
+              >
+                <img
+                  src={product.image}
+                  alt={product.name}
+                  className={styles.cardImage}
+                  loading="lazy"
+                />
+                <CardContent className={styles.cardContent}>
+                  <div>
+                    <h4 className={styles.cardTitle}>{product.name}</h4>
+                    <p className={styles.cardPrice}>{product.price}</p>
+                  </div>
+                </CardContent>
+              </Card>
+            )}
+          </ScrollReveal>
         ))}
       </div>
     </section>
