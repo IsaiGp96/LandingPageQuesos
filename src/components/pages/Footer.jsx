@@ -78,7 +78,7 @@ export default function Footer() {
                 {copied === 'clabe' && 'CLABE copiada ✅'}
               </div>
 
-              <p>* Envía tu comprobante por WhatsApp para confirmar tu pedido.</p>
+              <p>* Envía tu comprobante por WhatsApp para confirmar tu compra.</p>
               <a
                 href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`}
                 target="_blank"

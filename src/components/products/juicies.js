@@ -6,4 +6,8 @@ export const juicies = [
     { id: 5, name: 'Nopal', description: 'Nopal', image: '/images/nopal.png' },
     { id: 6, name: 'Piña', description: 'Piña', image: '/images/piña.png' },
     { id: 7, name: 'Perejil', description: 'Perejil', image: '/images/perejil.png' },
+    { id: 8, name: 'Mango', image: '/images/mangos.png' },
+    { id: 9, name: 'Guayaba', image: '/images/guayaba.png' },
+    { id: 10, name: 'Toronja', image: '/images/toronja.png' },
+
 ];
