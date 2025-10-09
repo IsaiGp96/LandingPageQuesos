@@ -60,7 +60,7 @@ export default function Footer() {
                 <p>Banco: <span>{bank.banco}</span></p>
               </div>
 
-              <dl className={styles.payList}>
+              <dl id='footer' className={styles.payList}>
                 <dt className={styles.term}>Beneficiario</dt>
                 <dd className={`${styles.value} ${styles.beneficiario}`}>{bank.beneficiario}</dd>
 

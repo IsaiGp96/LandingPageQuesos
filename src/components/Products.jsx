@@ -10,7 +10,7 @@ const products = [
 
 export default function Products() {
   return (
-    <section id="smoothies" className={styles.section}>
+    <section id="productos" className={styles.section}>
       <ScrollReveal once trigger="middle" offset={40}>
         {(active) => (
           <h3 className={`${styles.title} ${active ? styles.titleVisible : styles.titleHidden}`}>
